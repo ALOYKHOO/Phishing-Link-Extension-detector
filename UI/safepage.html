@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <link rel="stylesheet" href="../style.css">
+    <style>
+            .button-container {
+          margin-top: 12px;
+
+          display: flex;
+
+          gap: 10px;
+
+          justify-content: flex-start;
+      }
+
+      .button-group {
+          padding: 8px 14px;
+
+          border-radius: 6px;
+
+          border: none;
+
+          cursor: pointer;
+
+          font-weight: bold;
+      }
+
+      .btn-yes {
+          background-color: #f97316;
+          color: white;
+      }
+
+      .btn-no {
+          background-color: #22c55e;
+          color: white;
+      }
+    </style>
+</head>
+
+<body class="card">
+
+<div class="safepage_header">
+
+  <img src="../images/Logo.png" style="width:120px; height:auto;">
+
+  <div class="safepage_header-text">
+  <h1>Suspicious Website Detected</h1>
+  <h2>This website may be unsafe. Proceed only if you trust the source.</h2>
+  <div class="button-container">
+    <button id="proceedBtn" class="button-group btn-yes">Yes, Proceed</button>
+    <button id="cancelBtn" class="button-group btn-no">No, Go Back</button>
+    </div>
+  </div>
+
+</div>
+
+</body>
+
+<script src="../scripts/safepage.js"></script>
+ 
+
+
+</html>

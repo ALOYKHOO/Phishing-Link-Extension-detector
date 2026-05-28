@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <link rel="stylesheet" href="../style.css">
+      <style>
+        tr.selected td {
+          background-color: #ffcccc;
+          color: #cc0000;
+        }
+      </style>
+  </head>
+ 
+  <body class="card">
+    <div class="header">
+          <img src="../images/Logo.png" alt="Phishappear" class="logo">
+        <nav class="navbar">
+          <a href ="../UI/whitelist.html">User Whitelist</a>
+          <a href ="../UI/warningPref.html">Warning Preference</a>
+          <a href ="../UI/aiEval.html">AI Evaluation</a>
+          <a href ="../UI/about.html">About</a>
+        </nav>       
+    </div>
+ 
+    <table class="whitelist-content" id="listURL">
+      <thead>
+        <tr>
+          <th>Website Name</th>
+          <th>URL Link</th>
+          <th>Date Added</th>
+        </tr>
+      </thead>
+        <tbody class="table-body"></tbody>
+    </table>
+ 
+   
+    <div class="footer">
+      <button id="addURL">Add URL</button>
+      <button id="removeURL">Remove URL</button>
+      <button id="confirmDelete" style="display: none;">Confirm Delete</button>
+    </div>
+ 
+  </body>
+ 
+  <dialog id="addSiteDialog">
+    <div class="modal">
+      <div class="modal-content">
+        <h2 class="modal-title">Add URL to whitelist</h2>
+        <form id="addForm">
+          <div class="form-group">
+            <label for="name">Name :</label>
+            <input type="text" id="webname" placeholder="Enter name" required>
+          </div>
+ 
+          <div class="form-group">
+            <label for="url">URL :</label>
+            <input type="url" id="whitelistURL" placeholder="Enter URL" required>
+          </div>
+ 
+          <div class="warning-text">
+            The added URL will no longer be detected by the system and will be considered as safe<br>
+            Continue?
+          </div>
+ 
+          <div class="button-group">
+            <button type="submit" class="btn yes">Yes</button>
+            <button type="button" class="btn no">No</button>
+          </div>
+        </form>
+      </div>
+    </div>
+ 
+  </dialog>
+ 
+    <script src="../scripts/whitelistCRUD.js"></script>
+</html>

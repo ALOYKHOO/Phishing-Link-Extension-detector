@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "Phisappear",
+  "version": "1.0.0",
+  "description": "Phisappear help user to detect potential phishing link.",
+  "permissions": ["tabs", "activeTab", "storage", "scripting", "notifications",  "offscreen"],
+   "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "scripts/securityLogic.js"
+  },  
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/securityDisplay.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "model/*.onnx",
+        "model/*.onnx.data",
+        "model/*.json",
+        "lib/*.wasm",
+        "lib/ort.min.js",
+        "offscreen.html",
+        "offscreen.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_popup": "UI/popup.html",
+    "default_icon": {
+      "16": "images/Logo.png",
+      "48": "images/Logo.png"
+    }
+  },
+  "icons": {
+    "16": "images/Logo.png",
+    "48": "images/Logo.png"
+  }
+
+}

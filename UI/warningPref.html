@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <link rel="stylesheet" href="../style.css">
+  </head>
+  <body class="card">
+    <title>Phishappear — Notification Settings</title>
+    <div class="header">
+          <img src="../images/Logo.png" alt="Phishappear" class="logo">
+        <nav class="navbar">
+          <a href="../UI/whitelist.html">User Whitelist</a>
+          <a href="../UI/warningPref.html">Warning Preference</a>
+          <a href="../UI/aiEval.html">AI Evaluation</a>
+          <a href="../UI/about.html">About</a>
+        </nav>       
+    </div>
+ 
+  <div class="container"> 
+ 
+    <div class="noti-container">
+      <div class="level-icon active-1"></div>
+      <h2 class="risk-title">Safe</h2>
+    </div>
+    <div class="section safe">
+      <label><input type="checkbox" id="safe-popupBanner"> Enable pop-up notification</label>
+      <label><input type="checkbox" id="safe-showThreatLevel"> Show threat level on pop-up notification</label>
+    </div>
+ 
+    <div class="noti-container">
+      <div class="level-icon active-2"></div>
+      <h2 class="risk-title">Low Risk</h2>
+    </div>
+    <div class="section low">
+      <label><input type="checkbox" id="low_popup"> Enable pop-up notification</label>
+      <label><input type="checkbox" id="low_show_level"> Show threat level on pop-up notification</label>
+      <label><input type="checkbox" id="low_safe_page"> Require click to proceed to page</label>
+    </div>
+ 
+    <div class="noti-container">
+      <div class="level-icon active-3"></div>
+      <h2 class="risk-title">Moderate Risk</h2>
+    </div>
+    <div class="section moderate">
+      <label><input type="checkbox" id="mod_popup"> Enable pop-up notification</label>
+      <label><input type="checkbox" id="mod_show_level"> Show threat level on pop-up notification</label>
+      <label><input type="checkbox" id="mod_force"> Require click to proceed to page</label>
+      <label><input type="checkbox" id="mod_safe_page"> Enable safe page when clicking an unsafe link</label>
+    </div>
+ 
+    <div class="noti-container">
+      <div class="level-icon active-4"></div>
+      <h2 class="risk-title">High Risk</h2>
+    </div>
+    <div class="section high">
+      <label><input type="checkbox" id="high_popup"> Enable pop-up notification</label>
+      <label><input type="checkbox" id="high_show_level"> Show threat level on pop-up notification</label>
+      <label><input type="checkbox" id="high_force"> Require click to proceed to page</label>
+      <label><input type="checkbox" id="high_safe_page"> Enable safe page when clicking an unsafe link</label>
+      <label><input type="checkbox" id="high_return"> Force return user from high risk page</label>
+    </div>
+
+ 
+  </div>
+ 
+  <div class="footer">
+    <p>© 2026</p>
+  </div>
+ 
+  <script src="../scripts/warningpref.js"></script>
+ 
+ 
+  </body>
+</html>

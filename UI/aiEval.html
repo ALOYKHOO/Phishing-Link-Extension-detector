@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <link rel="stylesheet" href="../style.css">
+  </head>
+  <body class="card">
+ 
+    <div class="header">
+          <img src="../images/Logo.png" alt="Phishappear" class="logo">
+        <nav class="navbar">
+          <a href ="../UI/whitelist.html">User Whitelist</a>
+          <a href ="../UI/warningPref.html">Warning Preference</a>
+          <a href ="../UI/aiEval.html">AI Evaluation</a>
+          <a href ="../UI/about.html">About</a>
+        </nav>       
+    </div>
+ 
+    <body class="card">
+      <div style="padding: 20px;">
+          <h2>AI Model Tester: Powered by BERT Transformer</h2>
+          <div class="form-group">
+              <label for="testUrl">URL to Test:</label>
+              <input type="text" id="testUrl" placeholder="https://example.com" style="width: 100%; margin-bottom: 10px;">
+              <button id="runTest" class="btn yes" style="width: 100%;">Analyze URL</button>
+          </div>
+ 
+          <!-- Risk score summary -->
+          <div id="testResult" style="margin-top: 20px; padding: 15px; background: #3a3f5a; border-radius: 8px; display: none;">
+              <p><strong>Risk Score:</strong> <span id="resScore">-</span></p>
+              <p><strong>Risk Level:</strong> <span id="resLevel">-</span></p>
+          </div>
+ 
+          <!-- Detailed explanation — populated by aiEvalTester.js -->
+          <div id="explanationContainer" style="
+              margin-top: 14px;
+              padding: 16px;
+              background: #2e3350;
+              border-radius: 8px;
+              border: 1px solid rgba(195, 195, 220, 0.15);
+              display: none;
+          "></div>
+ 
+          <div id="loadingStatus" style="margin-top: 10px; font-style: italic; color: #c3c3dc;"></div>
+      </div>
+ 
+      <script src="../lib/ort.min.js"></script>
+      <script src="../scripts/aiEvalTester.js"></script>
+    </body>
+    </body>
+    <div class="footer">
+    <p>© 2026</p>
+    </div>
+</html>

@@ -1,5 +1,4 @@
-# Phishing-Link-Extension-detector
-Using hybrid heuristic-based and AI intelligence to detect potential phishing of user browser. 
+# FYP
 Step to open this extension as chrome developer
 1. Open browser extension tab at the top right
 2. Click "Manage extensions" at the bottom of the extension popup
